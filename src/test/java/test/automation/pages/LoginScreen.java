@@ -8,16 +8,19 @@ import org.openqa.selenium.By;
 import test.automation.pageobject.BasePageObject;
 
 public class LoginScreen extends BasePageObject {
+    By LoginPage(){
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Masuk ke akun Anda Masukkan email dan kata sandi Anda untuk masuk ke akun Atau lanjutkan dengan Tidak punya akun ?\"]");
+    }
     By fieldEmail(){ 
-        return MobileBy.xpath("//android.widget.EditText[1]");
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Masuk ke akun Anda Masukkan email dan kata sandi Anda untuk masuk ke akun Atau lanjutkan dengan Tidak punya akun ?\"]/android.widget.EditText[1]");
     }
 
     By fieldPassword() { 
-        return MobileBy.xpath("//android.widget.EditText[2]");
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Masuk ke akun Anda Masukkan email dan kata sandi Anda untuk masuk ke akun Atau lanjutkan dengan Tidak punya akun ?\"]/android.widget.EditText[2]");
     }
 
     By buttonLogin(){ 
-        return MobileBy.xpath("//android.widget.Button[@content-desc='Masuk']");
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Masuk\"]");
     }
 
     public void inputFieldEmail(String email) {
@@ -34,7 +37,7 @@ public class LoginScreen extends BasePageObject {
         click(buttonLogin());
     }
 
-    public void validateOnLoginScreen(){
-        isDisplayed(buttonLogin());
+    public boolean validateOnLoginScreen() {
+        return isDisplayed(LoginPage());
     }
 }

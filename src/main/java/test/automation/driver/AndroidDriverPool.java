@@ -17,7 +17,7 @@ public class AndroidDriverPool {
     public static void initialize() {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName", "Android");
-        caps.setCapability("platformVersion", "12.0");
+        caps.setCapability("platformVersion", "11.0");
         caps.setCapability("automationName", "UIAutomator2");
         caps.setCapability("app", "E:\\Magangs\\MSIB\\Stupen\\Alterra\\Capstone\\Mobile-stuff\\apk-release\\v1\\app-release.apk");
 
