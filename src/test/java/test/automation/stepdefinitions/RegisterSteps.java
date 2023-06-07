@@ -17,27 +17,46 @@ public class RegisterSteps {
 
 // Verify register feature
     @Given ("I Open SOCIOPS Apps")
-    public void openApps(){}
+    public void openApps(){
+        loginScreen.validateOnLoginScreen();
+        boolean actual = loginScreen.validateOnLoginScreen();
+        Assert.assertTrue(actual);
+    }
     @And ("I am on the login page and scroll down")
-    public void loginPageScroll(){}
+    public void loginPageScroll(){
+        loginScreen.validateOnLoginScreen();
+    }
     @When ("Click Buat Akun")
-    public void buatakunClicked(){}
+    public void buatakunClicked(){
+        registerScreen.clickButtonBuatAkun();
+    }
     @And ("Input email and password")
-    public void inputEmailPassword(){}
+    public void inputEmailPassword(){
+        registerScreen.inputEmailRegist("elisa@mail.com");
+        registerScreen.inputPassRegist("12312389");
+    }
     @And ("Click Register")
-    public void clickRegister(){}
+    public void clickRegister(){
+        registerScreen.clickToRegist();
+    }
 
 // Verify user can't register with invalid email
     @And ("Input invalid email and password")
-    public void inputInvalidEmailPass(){}
+    public void inputInvalidEmailPass(){
+        registerScreen.inputEmailRegist("absorrr1111");
+    }
     @Then ("i get messages registration")
     public void getMessRegist(){}
 
 // Verify user cannot create account with email that already exist
     @And ("Input already registered email and password")
-    public void inputRegisteredEmail(){}
+    public void inputRegisteredEmail(){
+        registerScreen.inputEmailRegist("absor@gamil.com");
+    }
 
 // Verify user cannot create account with invalid password
     @And ("Input email and 6 char password")
-    public void inputInvalidPass(){}
+    public void inputInvalidPass(){
+        registerScreen.inputPassRegist("AAAB26");
+    }
 }
