@@ -11,13 +11,16 @@ public class RegisterScreen extends BasePageObject{
     By Loginscreens(){
         return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Masuk ke akun Anda Masukkan email dan kata sandi Anda untuk masuk ke akun Atau lanjutkan dengan Tidak punya akun ?\"]");}
     By registButton(){
-        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Buat akun\"]");
+        return MobileBy.xpath("\t\n" +
+                "//android.widget.Button[@content-desc=\"Buat akun\"]");
     }
     By registEmailFill(){
-        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Buat akun baru! Buat akun Anda dan dapatkan akses pertama ke campaign dan komunitas Sociops Atau lanjutkan dengan Sudah punya akun?\"]/android.widget.EditText[1]");
+        return MobileBy.xpath("\t\n" +
+                "//android.widget.ImageView[@content-desc=\"Buat akun baru! Buat akun Anda dan dapatkan akses pertama ke campaign dan komunitas Sociops Atau lanjutkan dengan Sudah punya akun?\"]/android.widget.EditText[1]");
     }
     By registPasswordFill(){
-        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Buat akun baru! Buat akun Anda dan dapatkan akses pertama ke campaign dan komunitas Sociops Atau lanjutkan dengan Sudah punya akun?\"]/android.widget.EditText[2]");
+        return MobileBy.xpath("\t\n" +
+                "//android.widget.ImageView[@content-desc=\"Buat akun baru! Buat akun Anda dan dapatkan akses pertama ke campaign dan komunitas Sociops Atau lanjutkan dengan Sudah punya akun?\"]/android.widget.EditText[2]");
     }
     By registAccount(){return MobileBy.xpath("//android.widget.Button[@content-desc=\"Buat akun\"]");}
 
