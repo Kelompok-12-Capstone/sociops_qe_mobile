@@ -2,16 +2,13 @@ package test.automation.driver;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
-import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.concurrent.TimeUnit;
 
 public class AndroidDriverPool {
+
     public static AndroidDriver<AndroidElement> driver;
 
     public static void initialize() {
@@ -19,7 +16,7 @@ public class AndroidDriverPool {
         caps.setCapability("platformName", "Android");
         caps.setCapability("platformVersion", "12.0");
         caps.setCapability("automationName", "UIAutomator2");
-        caps.setCapability("app", "E:\\Magangs\\MSIB\\Stupen\\Alterra\\Capstone\\Mobile-stuff\\apk-release\\v1\\app-release.apk");
+        caps.setCapability("app", "C:\\Stupen\\Alterra\\apk-release.apk");
 
         try {
             driver = new AndroidDriver<AndroidElement>(new URL("http://0.0.0.0:4723/wd/hub"), caps);
@@ -31,5 +28,4 @@ public class AndroidDriverPool {
     public static void quit() {
         driver.quit();
     }
-
 }
