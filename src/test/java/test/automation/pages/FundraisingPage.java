@@ -9,31 +9,20 @@ public class FundraisingPage extends BasePageObject {
     //Scenario1
 
     By homeScreen() {
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Beranda Tab 1 of 4\"]");
+        return MobileBy.xpath("//android.widget.HorizontalScrollView/android.widget.EditText");
     }
 
     By fundraisingButton() {
         return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Galang Dana\"]");
     }
 
-    By fundraisingScreen() {
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Galang dana\"]");
-    }
 
     By donasiSekarangButton() {
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Donasi sekarang\"]");
     }
 
-    By detailFundraisingScreen() {
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Detail galang dana\"]");
-    }
-
     By donasiSekarangButton1() {
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Donasi sekarang\"]");
-    }
-
-    By pilihJumlahPembayaranScreen() {
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Pilih jumlah pembayaran\"]");
     }
 
     By chooseNominalButtoon() {
@@ -41,11 +30,7 @@ public class FundraisingPage extends BasePageObject {
     }
 
     By pilihPembayaranButton() {
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Rp2.000\"]");
-    }
-
-    By konfirmasiDonasiScreen() {
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Konfirmasi donasi\"]");
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Pilih pembayaran\"]");
     }
 
     By paymentMethodField() {
@@ -57,12 +42,9 @@ public class FundraisingPage extends BasePageObject {
     }
 
     By clickBayarButton() {
-        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Bayar\"]\n");
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Bayar\"]");
     }
 
-    By kodePembayaranScreen() {
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Kode pembayaran\"]");
-    }
 
     By pergiKeMitrans() {
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Pergi ke midtrans\"]");
@@ -80,25 +62,16 @@ public class FundraisingPage extends BasePageObject {
         click(fundraisingButton());
     }
 
-    public void iOnTheFundraisingScreen() {
-         isDisplayed(fundraisingScreen());
-    }
 
     public void iClickDonasiSekarangButoon() {
         click(donasiSekarangButton());
     }
 
-    public void iOntheDetailFundraisingScreen() {
-         isDisplayed(detailFundraisingScreen());
-    }
 
     public void iClickDonasiSekarangButton1() {
         click(donasiSekarangButton1());
     }
 
-    public void iOnthePilihJumlahPembayaranScreen() {
-         isDisplayed(pilihJumlahPembayaranScreen());
-    }
 
     public void iChooseNominalForFundraising() {
         click(chooseNominalButtoon());
@@ -108,9 +81,6 @@ public class FundraisingPage extends BasePageObject {
         click(pilihPembayaranButton());
     }
 
-    public void iOnTheKonfirmasiDonasiScreen() {
-         isDisplayed(konfirmasiDonasiScreen());
-    }
 
     public void iClickPaymentMethodField() {
         click(paymentMethodField());
@@ -124,9 +94,6 @@ public class FundraisingPage extends BasePageObject {
         click(clickBayarButton());
     }
 
-    public void iOnTheKodePembayaranScreen() {
-         isDisplayed(kodePembayaranScreen());
-    }
 
     public void iClickPergiKeMitransButton() {
         click(pergiKeMitrans());

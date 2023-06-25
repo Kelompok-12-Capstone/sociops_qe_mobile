@@ -24,30 +24,17 @@ public class FundraisingStep {
     }
 
 
-    @And("I on the fundraising screen")
-    public void OnTheFundraisingScreenAndSeeDetailFundraisingProgram() {
-        fundraisingPage.iOnTheFundraisingScreen();
-    }
-
     @And("I click donasi sekarang button")
     public void clickDonasiSekrangButton() {
         fundraisingPage.iClickDonasiSekarangButoon();
     }
 
-    @And("I on the detail fundraising screen")
-    public void onTheDetailFundraisingScreen() {
-        fundraisingPage.iOntheDetailFundraisingScreen();
-    }
 
     @And("I click donasi sekarang button1")
     public void clickDonasiSekrangButton1() {
         fundraisingPage.iClickDonasiSekarangButton1();
     }
 
-    @And("I on the pilih jumlah pembayaran screen")
-    public void onThePilihJumlahPembayaranScreen() {
-        fundraisingPage.iOnthePilihJumlahPembayaranScreen();
-    }
 
 
     @And("I choose nominal for fundraising")
@@ -60,10 +47,6 @@ public class FundraisingStep {
         fundraisingPage.iClickPilihPembayaranButton();
     }
 
-    @And("I on the konfirmasi donasi screen")
-    public void onTheKonfirmasiDonasiScreen() {
-        fundraisingPage.iOnTheKonfirmasiDonasiScreen();
-    }
 
     @And("I click payment method field")
     public void clickPaymentMethodField() {
@@ -80,10 +63,6 @@ public class FundraisingStep {
         fundraisingPage.iClickBayarButton();
     }
 
-    @And("I on the kode pembayaran screen")
-    public void onTheKodePembayaranScreen() {
-        fundraisingPage.iOnTheKodePembayaranScreen();
-    }
 
     @And("I click pergi ke mitrans after success payment")
     public void clickPergiKeMitransAfterSuccessPayment() {
