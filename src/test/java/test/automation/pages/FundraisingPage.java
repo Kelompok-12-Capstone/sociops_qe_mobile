@@ -6,10 +6,10 @@ import test.automation.pageobject.BasePageObject;
 
 public class FundraisingPage extends BasePageObject {
 
-    //Scenario1
+    // Scenario1
 
     By homeScreen() {
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Beranda Tab 1 of 4\"]");
+        return MobileBy.xpath("//android.widget.HorizontalScrollView/android.widget.EditText");
     }
 
     By fundraisingButton() {
@@ -18,10 +18,10 @@ public class FundraisingPage extends BasePageObject {
 
     By fundraisingScreen() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Galang dana\"]");
-    }
+    }   
 
     By donasiSekarangButton() {
-        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Donasi sekarang\"]");
+        return MobileBy.AccessibilityId("Donasi sekarang");
     }
 
     By detailFundraisingScreen() {
@@ -29,7 +29,7 @@ public class FundraisingPage extends BasePageObject {
     }
 
     By donasiSekarangButton1() {
-        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Donasi sekarang\"]");
+        return MobileBy.AccessibilityId("Donasi sekarang");
     }
 
     By pilihJumlahPembayaranScreen() {
@@ -41,7 +41,7 @@ public class FundraisingPage extends BasePageObject {
     }
 
     By pilihPembayaranButton() {
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Rp2.000\"]");
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Pilih pembayaran\"]");
     }
 
     By konfirmasiDonasiScreen() {
@@ -81,7 +81,7 @@ public class FundraisingPage extends BasePageObject {
     }
 
     public void iOnTheFundraisingScreen() {
-         isDisplayed(fundraisingScreen());
+        isDisplayed(fundraisingScreen());
     }
 
     public void iClickDonasiSekarangButoon() {
@@ -89,7 +89,7 @@ public class FundraisingPage extends BasePageObject {
     }
 
     public void iOntheDetailFundraisingScreen() {
-         isDisplayed(detailFundraisingScreen());
+        isDisplayed(detailFundraisingScreen());
     }
 
     public void iClickDonasiSekarangButton1() {
@@ -97,7 +97,7 @@ public class FundraisingPage extends BasePageObject {
     }
 
     public void iOnthePilihJumlahPembayaranScreen() {
-         isDisplayed(pilihJumlahPembayaranScreen());
+        isDisplayed(pilihJumlahPembayaranScreen());
     }
 
     public void iChooseNominalForFundraising() {
@@ -109,7 +109,7 @@ public class FundraisingPage extends BasePageObject {
     }
 
     public void iOnTheKonfirmasiDonasiScreen() {
-         isDisplayed(konfirmasiDonasiScreen());
+        isDisplayed(konfirmasiDonasiScreen());
     }
 
     public void iClickPaymentMethodField() {
@@ -125,7 +125,7 @@ public class FundraisingPage extends BasePageObject {
     }
 
     public void iOnTheKodePembayaranScreen() {
-         isDisplayed(kodePembayaranScreen());
+        isDisplayed(kodePembayaranScreen());
     }
 
     public void iClickPergiKeMitransButton() {
@@ -133,6 +133,6 @@ public class FundraisingPage extends BasePageObject {
     }
 
     public void iOnThePaymentSuccesScreen() {
-         isDisplayed(notifikasiPembayaran());
+        isDisplayed(notifikasiPembayaran());
     }
 }

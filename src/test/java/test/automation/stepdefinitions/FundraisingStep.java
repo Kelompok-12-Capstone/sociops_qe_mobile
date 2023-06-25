@@ -12,7 +12,7 @@ public class FundraisingStep {
     @Steps
     FundraisingPage fundraisingPage;
 
-    //scenario1
+    // scenario1
     @Given("I on the home screen")
     public void onTheHomeScreen() {
         fundraisingPage.iOnTheHomeScreen();
@@ -23,14 +23,13 @@ public class FundraisingStep {
         fundraisingPage.iClickFundraisingButton();
     }
 
-
     @And("I on the fundraising screen")
     public void OnTheFundraisingScreenAndSeeDetailFundraisingProgram() {
         fundraisingPage.iOnTheFundraisingScreen();
     }
 
     @And("I click donasi sekarang button")
-    public void clickDonasiSekrangButton() {
+    public void clickDonasiSekarangButton() {
         fundraisingPage.iClickDonasiSekarangButoon();
     }
 
@@ -40,7 +39,7 @@ public class FundraisingStep {
     }
 
     @And("I click donasi sekarang button1")
-    public void clickDonasiSekrangButton1() {
+    public void clickDonasiSekarangButton1() {
         fundraisingPage.iClickDonasiSekarangButton1();
     }
 
@@ -48,7 +47,6 @@ public class FundraisingStep {
     public void onThePilihJumlahPembayaranScreen() {
         fundraisingPage.iOnthePilihJumlahPembayaranScreen();
     }
-
 
     @And("I choose nominal for fundraising")
     public void chooseNominalForFundraising() {
