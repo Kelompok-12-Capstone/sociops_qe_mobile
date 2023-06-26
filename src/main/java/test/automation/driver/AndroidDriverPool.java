@@ -16,7 +16,7 @@ public class AndroidDriverPool {
         caps.setCapability("platformName", "Android");
         caps.setCapability("platformVersion", "12.0");
         caps.setCapability("automationName", "UIAutomator2");
-        caps.setCapability("app", "E:\\Magangs\\MSIB\\Stupen\\Alterra\\Capstone\\Mobile-stuff\\apk-release\\v3\\app-release.apk");
+        caps.setCapability("app", "E:\\Magangs\\MSIB\\Stupen\\Alterra\\Capstone\\Mobile-stuff\\apk-release\\v4\\app-release.apk");
 
         try {
             driver = new AndroidDriver<AndroidElement>(new URL("http://0.0.0.0:4723/wd/hub"), caps);
